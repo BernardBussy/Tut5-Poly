@@ -1,3 +1,5 @@
+#include <allegro5\allegro.h>
+#include <allegro5/allegro_primitives.h>
 #include "Circle.h"
 #include <iostream>
 #include <string>
@@ -28,5 +30,5 @@ double Circle::area()
 }
 void Circle::draw()
 {
-cout << "This is drawing a circle of Radius: " << radius << endl;
+	al_draw_circle(320, 240, radius, al_map_rgb_f(1, 0.5, 0), 3);
 }

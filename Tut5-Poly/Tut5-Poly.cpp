@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-	cout << "You have Now got " << Shape::noOfShapes << " Shapes!! " << endl;
+/*	cout << "You have Now got " << Shape::noOfShapes << " Shapes!! " << endl;
 
 	Shape *pointersToShapes[10];
 
@@ -29,7 +29,7 @@ int main()
 		pointersToShapes[i]->name();
 		pointersToShapes[i]->draw();
 		cout << "Area " << pointersToShapes[i]->area() << " and Perimeter " << pointersToShapes[i]->perimeter() << endl;
-	}
+	} */
 
 	ALLEGRO_DISPLAY *display = NULL;
 	if (!al_init()) {
@@ -37,6 +37,9 @@ int main()
 		return -1;
 	}
 	al_init_primitives_addon();
+	
+
+	
 
 	display = al_create_display(640, 480);
 	if (!display) {
@@ -44,13 +47,13 @@ int main()
 		return -1;
 	}
 	al_clear_to_color(al_map_rgb(0, 0, 0));
-
-	al_draw_circle(320, 240, 50, al_map_rgb_f(1, 0.5, 0), 3);
-	
+	Circle circle1(60);
+	Triangle triangle1(35);
+	circle1.draw();
+	triangle1.draw();
 	al_flip_display();
-
-	al_rest(10.0);
-
+	
+	al_rest(2.0);
 	al_destroy_display(display);
 
 

@@ -1,4 +1,6 @@
 #include "Triangle.h"
+#include <allegro5\allegro.h>
+#include <allegro5/allegro_primitives.h>
 #include <iostream>
 using namespace std;
 
@@ -18,7 +20,7 @@ Triangle::~Triangle()
 
 void Triangle::draw()
 {
-	cout << "This is drawing a Triangle" << endl;
+	al_draw_triangle(320, 240, (320 + Side), (240 + Side), 120, 115, al_map_rgb_f(1, 0.5, 0), 5);
 }
 double Triangle::area()
 {

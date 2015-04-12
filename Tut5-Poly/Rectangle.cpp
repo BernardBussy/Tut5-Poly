@@ -1,3 +1,5 @@
+#include <allegro5\allegro.h>
+#include <allegro5/allegro_primitives.h>
 #include "Rectangle.h"
 #include <iostream>
 using namespace std;
@@ -25,5 +27,5 @@ double Rectangle::area()
 }
 void Rectangle::draw()
 {
-	cout << "This is a Rectangle with sides A = " << sidesA << " and sides B = " << sidesB << endl;
+	al_draw_rectangle(320, 240, (320 + sidesA), (320 + sidesB), al_map_rgb_f(1, 0.5, 0), 5);
 }
