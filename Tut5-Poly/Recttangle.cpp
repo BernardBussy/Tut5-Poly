@@ -1,31 +1,31 @@
 #include <allegro5\allegro.h>
 #include <allegro5/allegro_primitives.h>
-#include "Rectangle.h"
+#include "Recttangle.h"
 #include <iostream>
 using namespace std;
 
-Rectangle::Rectangle(int A, int B) : sidesA(A), sidesB(B)
+Recttangle::Recttangle(int A, int B) : sidesA(A), sidesB(B)
 {
-	nameOfShape = "Rectangle";
+	nameOfShape = "Recttangle";
 	noOfShapes++;
 	noOfSides = 4;
 }
 
 
-Rectangle::~Rectangle()
+Recttangle::~Recttangle()
 {
 	noOfShapes--;
 }
 
-double Rectangle::perimeter()
+double Recttangle::perimeter()
 {
 	return (2 * sidesA + 2 * sidesB);
 }
-double Rectangle::area()
+double Recttangle::area()
 {
 	return sidesA*sidesB;
 }
-void Rectangle::draw()
+void Recttangle::draw()
 {
 	al_draw_rectangle(320, 240, (320 + sidesA), (320 + sidesB), al_map_rgb_f(1, 0.5, 0), 5);
 }

@@ -1,11 +1,11 @@
 #pragma once
 #include "Shape.h"
-class Rectangle :
+class Recttangle :
 	public Shape
 {
 public:
-	Rectangle(int, int);
-	~Rectangle();
+	Recttangle(int, int);
+	~Recttangle();
 	double perimeter();
 	double area();
 	void draw();
