@@ -5,3 +5,4 @@
 using namespace std;
 
 Circle circle1;
+cout << "This shape has perimeter: ";
