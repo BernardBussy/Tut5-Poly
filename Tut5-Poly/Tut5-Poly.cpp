@@ -4,6 +4,8 @@
 #include "Circle.h"
 #include "Triangle.h"
 #include "Rectangle.h"
+#include <allegro5\allegro.h>
+#include <stdio.h>
 using namespace std;
 
 int main()
@@ -15,7 +17,7 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		if (i < 3) pointersToShapes[i] = new Circle(i);
-		if ((i < 6) && (i >= 3)) pointersToShapes[i] = new Rectangle(i, 2);
+		if ((i < 6) && (i >= 3)) pointersToShapes[i] = new Triangle(i);
 		if ((i < 10) && (i >= 6)) pointersToShapes[i] = new Triangle(i);
 	}
 	
@@ -27,5 +29,6 @@ int main()
 		pointersToShapes[i]->draw();
 		cout << "Area " << pointersToShapes[i]->area() << " and Perimeter " << pointersToShapes[i]->perimeter() << endl;
 	}
+
 
 }
