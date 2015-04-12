@@ -5,6 +5,7 @@
 #include "Triangle.h"
 #include "Rectangle.h"
 #include <allegro5\allegro.h>
+#include <allegro5/allegro_primitives.h>
 #include <stdio.h>
 using namespace std;
 
@@ -29,6 +30,28 @@ int main()
 		pointersToShapes[i]->draw();
 		cout << "Area " << pointersToShapes[i]->area() << " and Perimeter " << pointersToShapes[i]->perimeter() << endl;
 	}
+
+	ALLEGRO_DISPLAY *display = NULL;
+	if (!al_init()) {
+		fprintf(stderr, "failed to initialize allegro!\n");
+		return -1;
+	}
+	al_init_primitives_addon();
+
+	display = al_create_display(640, 480);
+	if (!display) {
+		fprintf(stderr, "failed to create display!\n");
+		return -1;
+	}
+	al_clear_to_color(al_map_rgb(0, 0, 0));
+
+	al_draw_circle(320, 240, 50, al_map_rgb_f(1, 0.5, 0), 3);
+	
+	al_flip_display();
+
+	al_rest(10.0);
+
+	al_destroy_display(display);
 
 
 }
