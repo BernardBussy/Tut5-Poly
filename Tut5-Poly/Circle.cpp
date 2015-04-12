@@ -30,8 +30,3 @@ void Circle::draw()
 {
 cout << "This is drawing a circle of Radius: " << radius << endl;
 }
-
-void Circle::name()
-{
-	cout << "This is called a " << nameOfShape << endl;
-}

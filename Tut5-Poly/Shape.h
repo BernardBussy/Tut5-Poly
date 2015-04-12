@@ -6,7 +6,7 @@ class Shape
 public:
 	Shape();
 	~Shape();
-	virtual void name() = 0;
+	void name();
 	virtual double perimeter() = 0;
 	virtual double area() = 0;
 	virtual void draw() = 0;

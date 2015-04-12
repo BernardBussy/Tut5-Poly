@@ -4,7 +4,13 @@ class Triangle :
 	public Shape
 {
 public:
-	Triangle();
+	Triangle(int);
 	~Triangle();
+	void draw();
+	double area();
+	double perimeter();
+
+private:
+	const int Side;
 };
 
