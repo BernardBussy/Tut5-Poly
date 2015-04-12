@@ -6,12 +6,14 @@ class Shape
 public:
 	Shape();
 	~Shape();
-	virtual string name() = 0;
+	virtual void name() = 0;
 	virtual float perimeter() = 0;
 	virtual float area() = 0;
 	virtual void draw();
+	
 	static int noOfShapes;
-private:
+protected:
 	int noOfSides;
+	string nameOfShape;
 };
 
