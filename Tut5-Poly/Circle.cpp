@@ -18,20 +18,20 @@ Circle::~Circle()
 	noOfShapes--;
 }
 
-float Circle::perimeter()
+double Circle::perimeter()
 {
 	return (2 * pi*radius);
 }
-float Circle::area()
+double Circle::area()
 {
 	return (pi*radius*radius);
 }
 void Circle::draw()
 {
-	cout << "This is a circle or Radius: " << radius << endl;
+cout << "This is drawing a circle of Radius: " << radius << endl;
 }
 
 void Circle::name()
 {
-	cout << "This is a " << name << endl;
+	cout << "This is called a " << nameOfShape << endl;
 }

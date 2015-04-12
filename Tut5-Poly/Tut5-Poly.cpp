@@ -4,5 +4,10 @@
 #include "Circle.h"
 using namespace std;
 
-Circle circle1;
-cout << "This shape has perimeter: ";
+int main()
+{
+	Circle circle1(3);
+	circle1.name();
+	circle1.draw();
+	cout << "Area  " << circle1.area() << "  and perimeter  " << circle1.perimeter() << endl;
+}

@@ -6,11 +6,10 @@ public:
 	Circle(int);
 	~Circle();
 	void name();
-	float perimeter();
-	float area();
+	double perimeter();
+	double area();
 	void draw();
 
 private:
 	const int radius;
 };
-
