@@ -3,21 +3,29 @@
 #include "Shape.h"
 #include "Circle.h"
 #include "Triangle.h"
+#include "Rectangle.h"
 using namespace std;
 
 int main()
 {
-	Circle circle1(3);
-	circle1.name();
-	circle1.draw();
-	cout << "Area  " << circle1.area() << "  and perimeter  " << circle1.perimeter() << endl;
+	cout << "You have Now got " << Shape::noOfShapes << " Shapes!! " << endl;
 
-	cout << "You have created " << Shape::noOfShapes << " Shapes so Far!! " << endl;
+	Shape *pointersToShapes[10];
 
-	Triangle triangle1(4);
-	triangle1.name();
-	triangle1.draw();
-	cout << "Area  " << triangle1.area() << "  and perimeter  " << triangle1.perimeter() << endl;
+	for (int i = 0; i < 10; i++)
+	{
+		if (i < 3) pointersToShapes[i] = new Circle(i);
+		if ((i < 6) && (i >= 3)) pointersToShapes[i] = new Rectangle(i, 2);
+		if ((i < 10) && (i >= 6)) pointersToShapes[i] = new Triangle(i);
+	}
+	
+	cout << "You have Now got " << Shape::noOfShapes << " Shapes!! " << endl << endl;
+	
+	for (int i = 0; i < 10; i++)
+	{
+		pointersToShapes[i]->name();
+		pointersToShapes[i]->draw();
+		cout << "Area " << pointersToShapes[i]->area() << " and Perimeter " << pointersToShapes[i]->perimeter() << endl;
+	}
 
-	cout << "You have created " << Shape::noOfShapes << " Shapes so Far!! " << endl;
 }

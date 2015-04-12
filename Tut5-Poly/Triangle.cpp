@@ -7,6 +7,7 @@ Triangle::Triangle(int s) : Side(s)
 {
 	noOfShapes++;
 	nameOfShape = "Triangle";
+	noOfSides = 3;
 }
 
 
